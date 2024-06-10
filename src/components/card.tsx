@@ -1,17 +1,20 @@
 import { FaTelegram } from "react-icons/fa";
+import { MdDelete } from "react-icons/md";
 
 type Props = {
   index: number;
   item: {
+    id: number;
     name: string;
     stack: string;
     position: string;
     telegramId: string;
     image: string;
   };
+  Filter?: (id: number) => void;
 };
 
-const Card = ({ index, item }: Props) => {
+const Card = ({ index, item, Filter }: Props) => {
   return (
     <section
       key={index}
@@ -31,6 +34,17 @@ const Card = ({ index, item }: Props) => {
           <FaTelegram size={14} />
           <p className="text-xs ml-2">{item.telegramId}</p>
         </div>
+      </div>
+      <div
+        aria-label="Delete the card"
+        data-balloon-pos={"up"}
+        className="self-start ml-auto"
+        onClick={() => Filter?.(item.id)}
+      >
+        <MdDelete
+          className=" hover:text-red-500 transition-colors "
+          size={24}
+        />
       </div>
     </section>
   );
