@@ -36,8 +36,14 @@ const App = () => {
   };
   const PusherData = () => {
     setData([...Data, States]);
-    setStates({} as Statetype);
-    Data.length > 1 && setlayer(true);
+    setStates({
+      id: 0,
+      name: "",
+      position: "",
+      stack: "",
+      telegramId: "",
+    } as Statetype);
+    setlayer(false);
   };
   const handleChangeText = (e: ChangeEvent<HTMLInputElement>) => {
     setStates({ ...States, [e.target.name]: e.target.value });
@@ -95,10 +101,10 @@ const App = () => {
               type="button"
               className="group  relative inline-block overflow-hidden text-lg  border-gray-100 w-52 h-16  font-medium  hover:text-cyan-400 focus:outline-none   font-mono bg-black outline-none text-white rounded shadow-sm hover:shadow-lg  hover:scale-105 transition-all duration-200 "
             >
-              <span className="ease absolute left-0 top-0 h-0 w-0 border-t-2 border-cyan-400 transition-all duration-200 group-hover:w-full"></span>
-              <span className="ease absolute right-0 top-0 h-0 w-0 border-r-2 border-cyan-400 transition-all duration-200 group-hover:h-full"></span>
-              <span className="ease absolute bottom-0 right-0 h-0 w-0 border-b-2 border-cyan-400 transition-all duration-200 group-hover:w-full"></span>
-              <span className="ease absolute bottom-0 left-0 h-0 w-0 border-l-2 border-cyan-400 transition-all duration-200 group-hover:h-full"></span>
+              <span className="ease absolute left-0 top-0 h-0 w-0 border-t-2 border-cyan-400 transition-all duration-200 group-hover:w-full group-focus:w-full"></span>
+              <span className="ease absolute right-0 top-0 h-0 w-0 border-r-2 border-cyan-400 transition-all duration-200 group-hover:h-full group-focus:h-full"></span>
+              <span className="ease absolute bottom-0 right-0 h-0 w-0 border-b-2 border-cyan-400 transition-all duration-200 group-hover:w-full group-focus:w-full"></span>
+              <span className="ease absolute bottom-0 left-0 h-0 w-0 border-l-2 border-cyan-400 transition-all duration-200 group-hover:h-full group-focus:h-full"></span>
               Add to cards
             </button>
           </form>
@@ -106,10 +112,12 @@ const App = () => {
       </main>
 
       <button
-        onClick={Data.length < 2 ? () => setlayer(true) : () => setlayer(false)}
+        onClick={() => setlayer(!layer)}
         className="font-mono text-2xl text-teal-300 bg-transparent border-0 hover:text-teal-500 transition-colors mb-5"
       >
-        {Data.length > 1
+        {!layer
+          ? "Add card"
+          : Data.length > 1
           ? "Check all cards"
           : `create more cards ${
               Data.length !== 0 && "(you have only one card!)"
@@ -123,10 +131,10 @@ const App = () => {
           type="button"
           className="group  relative inline-block overflow-hidden text-lg  border-gray-100 w-52 h-16  font-medium  hover:text-cyan-400 focus:outline-none   font-mono bg-black outline-none text-white rounded shadow-sm hover:shadow-lg  hover:scale-105 transition-all duration-200 "
         >
-          <span className="ease absolute left-0 top-0 h-0 w-0 border-t-2 border-cyan-400 transition-all duration-200 group-hover:w-full"></span>
-          <span className="ease absolute right-0 top-0 h-0 w-0 border-r-2 border-cyan-400 transition-all duration-200 group-hover:h-full"></span>
-          <span className="ease absolute bottom-0 right-0 h-0 w-0 border-b-2 border-cyan-400 transition-all duration-200 group-hover:w-full"></span>
-          <span className="ease absolute bottom-0 left-0 h-0 w-0 border-l-2 border-cyan-400 transition-all duration-200 group-hover:h-full"></span>
+          <span className="ease absolute left-0 top-0 h-0 w-0 border-t-2 border-cyan-400 transition-all duration-200 group-hover:w-full group-focus:w-full"></span>
+          <span className="ease absolute right-0 top-0 h-0 w-0 border-r-2 border-cyan-400 transition-all duration-200 group-hover:h-full group-focus:h-full"></span>
+          <span className="ease absolute bottom-0 right-0 h-0 w-0 border-b-2 border-cyan-400 transition-all duration-200 group-hover:w-full group-focus:w-full"></span>
+          <span className="ease absolute bottom-0 left-0 h-0 w-0 border-l-2 border-cyan-400 transition-all duration-200 group-hover:h-full group-focus:h-full"></span>
           Select From Cards
         </button>
       )}
