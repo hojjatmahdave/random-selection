@@ -19,7 +19,7 @@ const Footer = () => {
           size={22}
           onClick={() =>
             SocialURLs(
-              "https://www.linkedin.com/in/mohammad-hojjat-mahdi-zada-6167b323b/"
+              "https://www.linkedin.com/in/mohammad-hojjat-mahdizada-3769b02a8/"
             )
           }
         />
