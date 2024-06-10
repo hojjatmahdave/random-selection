@@ -2,7 +2,6 @@ export const data = [
   {
     id: 1,
     name: "Saboor",
-    image: "./src/assets/profileImages/saboor.jpg",
     position: "Intern",
     telegramId: "@SMmehrban ",
     stack: "Word Press",
@@ -10,7 +9,6 @@ export const data = [
   {
     id: 2,
     name: "Mohammad Hojjat",
-    image: "./src/assets/profileImages/Mohammad hojjat.jpg",
     position: "Team Leader",
     telegramId: "@EMHM2022 ",
     stack: "Frontend",
@@ -18,7 +16,6 @@ export const data = [
   {
     id: 3,
     name: "Ali Reza",
-    image: "./src/assets/profileImages/alireza.jpg",
     position: "Developer",
     telegramId: "@A_ZerstoRer ",
     stack: "Mobile",
@@ -26,7 +23,6 @@ export const data = [
   {
     id: 4,
     name: "Asem",
-    image: "./src/assets/profileImages/Asem.jpg",
     position: "Team Leader",
     telegramId: "@AQ725 ",
     stack: "Mobile",
@@ -34,7 +30,6 @@ export const data = [
   {
     id: 5,
     name: "Fahim",
-    image: "./src/assets/profileImages/Fahim.jpg",
     position: "Developer",
     telegramId: "@Poya0795860286 ",
     stack: "Word Press",
@@ -42,7 +37,6 @@ export const data = [
   {
     id: 7,
     name: "Farhang",
-    image: "./src/assets/profileImages/farhang.jpg",
     position: "Team Leader",
     telegramId: "@farhangarab7 ",
     stack: "Backend",
@@ -50,7 +44,6 @@ export const data = [
   {
     id: 6,
     name: "Mehdi",
-    image: "./src/assets/profileImages/mehdi.jpg",
     position: "Designer",
     telegramId: "@m9heb ",
     stack: "UI/UX Designer",
@@ -58,7 +51,6 @@ export const data = [
   {
     id: 8,
     name: "Pooria",
-    image: "./src/assets/profileImages/Pooria.jpg",
     position: "Developer",
     telegramId: "@MohammedPooryaKhoshbin ",
     stack: "Frontend",
@@ -66,7 +58,6 @@ export const data = [
   {
     id: 9,
     name: "Rashed",
-    image: "./src/assets/profileImages/rashed.jpg",
     position: "Developer",
     telegramId: "@rahimirashed ",
     stack: "Mobile",
@@ -74,7 +65,6 @@ export const data = [
   {
     id: 10,
     name: "Rohullah",
-    image: "./src/assets/profileImages/ruhullah.jpg",
     position: "Intern",
     telegramId: "@Rohullah_Barak ",
     stack: "Word Press",
@@ -82,7 +72,6 @@ export const data = [
   {
     id: 11,
     name: "Sajad",
-    image: "",
     position: "Intern",
     telegramId: "@Sajad_Rad7 ",
     stack: "Backend",
@@ -90,7 +79,6 @@ export const data = [
   {
     id: 12,
     name: "Rabea",
-    image: "",
     position: "Team Leader",
     telegramId: "@m_r786 ",
     stack: "Backend",
@@ -98,7 +86,6 @@ export const data = [
   {
     id: 13,
     name: "Mohebullah",
-    image: "./src/assets/profileImages/moheb.jpg",
     position: "Developer",
     telegramId: "@Mohebullah50",
     stack: "Backend",
